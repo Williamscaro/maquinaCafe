@@ -6,8 +6,35 @@
 
 /**
  *
- * @author DELL
+ * @author Williams Caro
  */
 public class TestMaquinaDeCafe {
+    Cafetera cafetera;
+    Vaso vasosPequeno;
+    Vaso vasosGrande;
+    Vaso vasosMediano;
+    Azucarero azucarero;
+    MaquinaDeCafe maquinaDeCafe;
+    
+    public void setUp(){
+    cafetera = new Cafetera(50);
+    vasosPequeno = new Vaso(5,10);
+    vasosMediano = new Vaso (5,20);
+    vasosGrande = new Vaso (5,30);
+    azucarero = new Azucarero(20);
+    
+    maquinaDeCafe=new MaquinaDeCafe();
+    maquinaDeCafe.setCafetera(cafetera);
+    maquinaDeCafe.setVasosPequeno(vasosPequeno);
+    maquinaDeCafe.setVasosMediano(vasosMediano;
+    maquinaDeCafe.setVasosGrande(vasosGrande);
+    maquinaDeCafe.setAzucarero(azucarero);
+    }
+    
+    public void deberiaDevolverUnVasoPequeno(){
+    Vaso vaso = maquinaDeCafe.getTipoDeVaso("pequeño");
+    assertEquals(MaquinaDeCafe.vasosPequeno, vaso);
+    }
+    
     
 }
